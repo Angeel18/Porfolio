@@ -1,4 +1,4 @@
-/* RESET CSS */
+/* Reset CSS */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,107 +12,169 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1.6;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
 /* Variables */
-
-:root{
-    --color-primario: rgb(109, 108, 108);
-    --color-secundario: gray;
-    --color-white:white;
-    --color-black:black;
+:root {
+    --primary-color: #0A0A0A;
+    --secondary-color: #1B1B1B;
+    --terciary-color: #2A2A2A;
+    --accent-color: #999999;
+    --color-black: black;
 }
 
 /* Body */
-
-body{
-    background-color: var(--color-primario);
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: white;
+    background: radial-gradient(circle, #2A2A2A 10%, #0A0A0A 100%);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 /* Header */
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
     align-items: center;
-    background-color: var(--color-secundario);
-    box-shadow: 0 0 10px 0px black,inset 0 0 3px 0px black;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 10px 0px black, inset 0 0 3px 0px black;
+    color: white;
+    font-weight: 500;
 }
-.header-left{
-    font-size: 50px;
+
+.header-left {
+    font-size: 2.2em;
+    font-weight: 600;
 }
-.header-right{
-    font-size: larger;
+
+.header-right {
+    font-size: 1.1em;
     display: flex;
     gap: 20px;
 }
 
-/* Contact */
+.header-right a {
+    color: var(--accent-color);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
 
-.contact-box{
-    width: 200px;
-    height: 100px;
-    background-color: var(--color-secundario);
-    border-radius: 20px;
-    padding: 10px 20px 30px 30px;
+.header-right a:hover {
+    color: white;
+}
+
+/* Contact box */
+.contact-box {
+    width: 220px;
+    background-color: var(--terciary-color);
+    border-radius: 12px;
+    padding: 20px 30px;
     margin: 20px;
     position: fixed;
     bottom: 0;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: var(--color-white);
-    box-shadow: 0 0 20px 0px black,inset 0 0 3px 0px black;
-
+    color: white;
+    box-shadow: 0 0 15px 0px black, inset 0 0 3px 0px black;
 }
-.contact-box h2{
-    font-size:28px;
 
-}
-.contact-box-content{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    
-    gap: 10px;
-
-}
-.contact-box-content div{
-    display: flex;
-    gap: 10px;
+.contact-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color:white;
+    text-align: center;
     width: 100%;
+    border-bottom: 1px solid white;
 }
+
+.contact-box-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-box-content div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-box-content p {
+    font-size: 0.9em;
+    color: white;
+}
+
+
+.contact-box-content svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--accent-color);
+    transition: fill 0.3s ease;
+}
+
+.contact-box-content a:hover svg {
+    fill: white;
+}
+
+
+.contact-box-content a {
+    color: var(--accent-color);
+    font-weight: 400;
+}
+
+/* PDF button */
+.pdf-button {
+    padding: 10px 20px;
+    background-color: #2A2A2A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover {
+    background-color: rgb(104, 103, 103);
+}
+
