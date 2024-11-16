@@ -50,18 +50,18 @@ a {
 
 /* Variables */
 :root {
-    --primary-color: #0A0A0A;
-    --secondary-color: #1B1B1B;
-    --terciary-color: #2A2A2A;
-    --accent-color: #999999;
-    --color-black: black;
+    --primary-color: #050A12;
+    --secondary-color: #0B1A26;
+    --terciary-color: #0F2736;
+    --accent-color: #3A4D5C;
+    --color-black: #04080F;
 }
 
 /* Body */
 body {
     font-family: "IBM Plex Sans", sans-serif;
     color: white;
-    background: radial-gradient(circle, #2A2A2A 10%, #0A0A0A 100%);
+    background: radial-gradient(circle, #0F2736 10%, #050A12 100%);
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -74,7 +74,7 @@ body {
     padding: 20px 40px;
     align-items: center;
     background-color: var(--secondary-color);
-    box-shadow: 0 0 10px 0px black, inset 0 0 3px 0px black;
+    box-shadow: 0 0 10px 0px var(--color-black), inset 0 0 3px 0px var(--color-black);
     color: white;
     font-weight: 500;
 }
@@ -111,17 +111,17 @@ body {
     bottom: 0;
     left: 0;
     color: white;
-    box-shadow: 0 0 15px 0px black, inset 0 0 3px 0px black;
+    box-shadow: 0 0 15px 0px var(--color-black), inset 0 0 3px 0px var(--color-black);
 }
 
 .contact-box h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
     font-weight: 500;
-    color:white;
+    color: white;
     text-align: center;
     width: 100%;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--accent-color);
 }
 
 .contact-box-content {
@@ -132,15 +132,14 @@ body {
 
 .contact-box-content div {
     display: flex;
-    align-items: center;
     gap: 10px;
 }
 
 .contact-box-content p {
     font-size: 0.9em;
     color: white;
+    align-items: center;
 }
-
 
 .contact-box-content svg {
     width: 20px;
@@ -153,7 +152,6 @@ body {
     fill: white;
 }
 
-
 .contact-box-content a {
     color: var(--accent-color);
     font-weight: 400;
@@ -162,7 +160,7 @@ body {
 /* PDF button */
 .pdf-button {
     padding: 10px 20px;
-    background-color: #2A2A2A;
+    background-color: var(--terciary-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -175,6 +173,5 @@ body {
 }
 
 .pdf-button:hover {
-    background-color: rgb(104, 103, 103);
+    background-color: #233649;
 }
-
