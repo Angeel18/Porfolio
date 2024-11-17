@@ -1,17 +1,85 @@
 /* Reset CSS */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -19,30 +87,50 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
+
 body {
     line-height: 1.6;
     font-family: "IBM Plex Sans", sans-serif;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -82,10 +170,10 @@ body {
     width: 500px;
     background: #333;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     backdrop-filter: blur(10px);
     border-radius: 25px;
-    box-shadow:inset 0 0 5px 1px  #333,0 0 5px 1px #333;
+    box-shadow: inset 0 0 5px 1px #333, 0 0 5px 1px #333;
     z-index: 10;
 }
 
@@ -160,33 +248,43 @@ body {
 
 /* About Me */
 
-.aboutme{
+.aboutme {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 200px 0;
     border: var(--primary-color);
 }
-.aboutme-content{
+
+.aboutme-content {
     display: flex;
     gap: 40px;
     align-items: center;
     justify-content: center;
     width: 50%;
 }
-.aboutme-content-left{
+
+.aboutme-content-left {
     display: flex;
     gap: 40px;
     align-items: center;
     justify-content: center;
     width: 50%;
 }
-.aboutme-content-left img{
+
+.aboutme-content-left img {
     width: 400px;
     border-radius: 100%;
-    box-shadow:0 0 5px 5px var(--primary-color);
+    box-shadow: 0 0 5px 5px var(--primary-color);
+    filter: grayscale(50%);
+    transition: filter 1s;
 }
-.aboutme-content-right{
+
+img:hover {
+    filter: grayscale(20%);
+}
+
+.aboutme-content-right {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -220,7 +318,7 @@ body {
 
 .languages {
     display: flex;
-    flex-direction: column  ;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 200px 0;
@@ -235,27 +333,34 @@ body {
 
 .languages-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 30px;
     justify-content: center;
     align-items: center;
     width: 50%;
     margin: 0 auto;
 }
-.language-card{
+
+.language-card {
     display: flex;
     width: 70%;
     align-items: center;
-} 
+    justify-content: center;
+}
 
+.languages-content img {
+    width: 100%;
+    object-fit: contain;
+}
 .language-card img {
     width: 100%;
+    object-fit: contain;
 }
 
 /* Projects */
 .projects {
     text-align: center;
-    padding: 100px 20px;
+    padding: 150px 20px;
     color: white;
 }
 
@@ -268,7 +373,7 @@ body {
 
 .projects-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
     justify-content: center;
     align-items: center;
@@ -323,7 +428,7 @@ body {
 
 /* Contact */
 .contact {
-    padding: 200px 0 80px    0;
+    padding: 200px 0 80px 0;
     text-align: center;
     background-color: #131313;
     color: white;
@@ -370,11 +475,98 @@ body {
     fill: white;
 }
 
-footer{
+footer {
     display: flex;
     height: 60px;
-    background-color:#000000;
+    background-color: #000000;
     justify-content: center;
     align-items: center;
-    
+
+}
+
+
+/* Responsive CSS */
+
+/* General Media Query for smaller screens */
+@media (max-width: 1024px) {
+    .header-content {
+        width: 90%;
+        top: 15px;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .header-content a {
+        margin: 5px;
+        font-size: 0.9em;
+    }
+
+    .aboutme-content {
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+    }
+
+    .aboutme-content-left,
+    .aboutme-content-right {
+        width: 100%;
+    }
+
+    .aboutme-content-left img {
+        width: 200px;
+    }
+
+    .languages-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width:50%;
+    }
+
+    .projects-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 90%;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        gap: 10px;
+        width: 90%;
+    }
+    .contact-content div{
+        display: flex;        
+        align-items: center;
+        justify-content: center;
+
+
+
+    }
+
+    .contact-box {
+        width: 180px;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .languages-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+        width: 30%;
+    }
+    .language-card {
+       display: none;
+    }
+
+    .projects-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
 }

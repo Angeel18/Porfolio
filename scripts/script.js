@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     navLinks.forEach((link) => link.classList.remove("active"));
-
                     const activeLink = document.querySelector(
                         `.header-content a[href="#${entry.target.id}"]`
                     );
@@ -15,10 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         },
-        {threshold: 1} 
+        {
+            threshold: 0.6,
+            rootMargin: "0px 0px -10% 0px",
+        }
     );
+
     sections.forEach((section) => observer.observe(section));
 });
+
 
 const contactBox = document.querySelector('.contact-box');
 const contactSection = document.getElementById('contact');
